@@ -5,7 +5,12 @@ import {Button, Gap, PageHeader, TextInput} from '../../components';
 const SignIn = ({navigation}) => {
   return (
     <ScrollView style={styles.container}>
-      <PageHeader label="Sign In" />
+      <PageHeader
+        label="Sign In"
+        backButton={undefined}
+        onPress={undefined}
+        Type={undefined}
+      />
       <Gap height={24} />
       <View style={styles.contentWrapper}>
         <Gap height={24} />
@@ -16,13 +21,20 @@ const SignIn = ({navigation}) => {
         <Gap height={16} />
         <TextInput label="Password" placeholder="Type your password" />
         <Gap height={24} />
-        <Button label="Sign In" onSubmit={() => navigation.navigate('Home')} />
+        <Button
+          label="Sign In"
+          onSubmit={() => navigation.navigate('Home')}
+          type={undefined}
+          icon={undefined}
+        />
         <Gap height={12} />
         <Button
           label="Create New Account"
           backgroundColor="#8D92A3"
           textColor="#FFFFFF"
           onSubmit={() => navigation.navigate('SignUp')}
+          type={undefined}
+          icon={undefined}
         />
       </View>
     </ScrollView>
